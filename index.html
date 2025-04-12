@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Mainan Keren</title>
+    <style>
+        /* CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #6b77ff;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        nav {
+            background-color: #cd4e56;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #FFE66D;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .hero {
+            background-color: #FFE66D;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            scroll-margin-top: 100px; /* Untuk offset navigasi sticky */
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            color: #FF6B6B;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .add-to-cart {
+            background-color: #4ECDC4;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #3DBEB6;
+        }
+        
+        /* Section Produk */
+        #produk {
+            scroll-margin-top: 80px; /* Untuk offset navigasi sticky */
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #292F36;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #4ECDC4;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .product-grid {
+                scroll-margin-top: 150px; 
+            }
+            
+            #produk {
+                scroll-margin-top: 130px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Mainan Keren</div>
+        <p>Toko Mainan Keren Terlengkap dan Termurah</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#">Kategori</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section class="hero">
+            <h1>Selamat Datang di Toko Mainan Online Kami!</h1>
+            <p>Temukan mainan edukatif terbaik untuk Anak Anda</p>
+        </section>
+        
+        <section id="produk"> 
+            <h2>Produk Terbaru</h2>
+            <div class="product-grid">
+                <!-- Produk 1 -->
+                <div class="product-card">
+                    <img src="WhatsApp Image 2025-04-12 at 08.53.45.jpeg" alt="Mainan Edukatif" class="product-image">
+                    <h3 class="product-title">Mainan Ultraman Zero</h3>
+                    <p class="product-description">Mainan Super Hero Figuran Untuk anak</p>
+                    <p class="product-price">Rp 125.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                </div>
+                
+                <!-- Produk 2 -->
+                <div class="product-card">
+                    <img src="WhatsApp Image 2025-04-12 at 09.01.24.jpeg" alt="Puzzle Anak" class="product-image">
+                    <h3 class="product-title">Puzzle Castil/Kerajaan</h3>
+                    <p class="product-description">Puzzle kayu dengan gambar Kerajaan untuk melatih kreativitas Anak</p>
+                    <p class="product-price">Rp 85.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                </div>
+                
+                <!-- Produk 3 -->
+                <div class="product-card">
+                    <img src="WhatsApp Image 2025-04-12 at 09.05.53.jpeg" alt="Mainan Remote Control" class="product-image">
+                    <h3 class="product-title">Mobil Remote Control</h3>
+                    <p class="product-description">Mobil yang bisa berubah menjadi robot dengan remote kontrol</p>
+                    <p class="product-price">Rp 299.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                </div>
+                
+                <!-- Produk 4 -->
+                <div class="product-card">
+                    <img src="WhatsApp Image 2025-04-12 at 09.08.45 (1).jpeg" alt="Mainan Playground" class="product-image">
+                    <h3 class="product-title">Trampolin Anak</h3>
+                    <p class="product-description">Mainan Trampolin untuk anak</p>
+                    <p class="product-price">Rp 150.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                </div>
+                
+                <!-- Produk 5 -->
+                <div class="product-card">
+                    <img src="WhatsApp Image 2025-04-12 at 09.08.45.jpeg" alt="Lego Anak Ninja Go" class="product-image">
+                    <h3 class="product-title">Lego Ninja GO</h3>
+                    <p class="product-description">Lego Super Hero Untuk Anak</p>
+                    <p class="product-price">Rp 175.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                </div>
+                
+                <!-- Produk 6 -->
+                <div class="product-card">
+                    <img src="WhatsApp Image 2025-04-12 at 09.08.46.jpeg" alt="Mainan Tembakan Air" class="product-image">
+                    <h3 class="product-title">Mainan Tembakan Air</h3>
+                    <p class="product-description">Mainan Tembakan Air</p>
+                    <p class="product-price">Rp 85.000</p>
+                    <button class="add-to-cart">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">Tentang Kami</a>
+            <a href="#">Kebijakan Privasi</a>
+            <a href="#">Syarat dan Ketentuan</a>
+            <a href="#">Bantuan</a>
+        </div>
+        <p>&copy; 2023 Mainan Keren - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
